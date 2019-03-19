@@ -1,0 +1,193 @@
+commit f364839ac64b78004ce9cb330ea68b85bd1fd493
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Tue Mar 19 22:38:15 2019 +0200
+
+    muokattiin tiedostoja
+
+ tiedostoja/file2             | 0
+ tiedostoja/{file1 => file22} | 0
+ 2 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 64c7c73012419435c88ad942dac88e40e641472c
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Tue Mar 19 22:33:39 2019 +0200
+
+    lisättiin tiedostoja
+
+ tiedostoja/file1 | 0
+ tiedostoja/file2 | 0
+ tiedostoja/file3 | 0
+ 3 files changed, 0 insertions(+), 0 deletions(-)
+
+commit 4e2618e8a1ee9aa79fbdfccce63de6cbbdc6fdd2
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Mon Jan 7 02:29:10 2019 +0200
+
+    Osa 3. Kahdeksas tehtävä
+
+ index.html | 10 +++++-----
+ 1 file changed, 5 insertions(+), 5 deletions(-)
+
+commit 4ccdd3cc15665a81280ef4793e5ae690097207f3
+Author: AnnaKuokkanen <44625221+AnnaKuokkanen@users.noreply.github.com>
+Date:   Mon Jan 7 02:27:11 2019 +0200
+
+    Update style.css
+
+ style.css | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 35e25a5fee923847434d1f5607c7b6f0b4f4ca04
+Author: AnnaKuokkanen <44625221+AnnaKuokkanen@users.noreply.github.com>
+Date:   Mon Jan 7 02:26:56 2019 +0200
+
+    Update style.css
+
+ style.css | 5 ++++-
+ 1 file changed, 4 insertions(+), 1 deletion(-)
+
+commit 7c5388a7c5353a29ceb3c8a9cbcaf9583e975b93
+Author: AnnaKuokkanen <44625221+AnnaKuokkanen@users.noreply.github.com>
+Date:   Sun Jan 6 22:24:19 2019 +0200
+
+    Update style.css
+
+ style.css | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit ea396506d1fa1620a829816908005ce1ee20dac1
+Author: AnnaKuokkanen <44625221+AnnaKuokkanen@users.noreply.github.com>
+Date:   Sun Jan 6 22:21:49 2019 +0200
+
+    Update style.css
+
+ style.css | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+commit da713c295f2bf673897a17a8c1ab87cee1a129ea
+Author: AnnaKuokkanen <44625221+AnnaKuokkanen@users.noreply.github.com>
+Date:   Sun Jan 6 22:18:45 2019 +0200
+
+    Update style.css
+
+ style.css | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+commit 5fa60d386a03a1940b79e984b2732f303ed6f77a
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Sun Jan 6 03:54:12 2019 +0200
+
+    Osa 3. Seitsemäs tehtävä
+
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 59b8abdae669283d743314fce1c1150c643975f9
+Author: AnnaKuokkanen <44625221+AnnaKuokkanen@users.noreply.github.com>
+Date:   Sun Jan 6 03:49:29 2019 +0200
+
+    Update style.css
+
+ style.css | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 116dd1f31a945b9874d81c811a6fafdbb0b781c8
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Sun Jan 6 03:48:47 2019 +0200
+
+    css-tiedosto
+
+ style.css | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 2fd6887f2897f6e9939dcb99ebd0024f1bdfa66e
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Sun Jan 6 03:43:52 2019 +0200
+
+    Osa 3. Kuudes tehtävä
+
+ index.html  | 1 +
+ index2.html | 5 +++++
+ 2 files changed, 6 insertions(+)
+
+commit 4c8ae2b4f038de3006080b7d5876a587b3c30dca
+Author: AnnaKuokkanen <44625221+AnnaKuokkanen@users.noreply.github.com>
+Date:   Sun Jan 6 03:31:16 2019 +0200
+
+    Update index2.html
+
+ index2.html | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
+commit b2bd4c7ba582cb0dd9b8adbe860607172cad6f02
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Sun Jan 6 03:29:50 2019 +0200
+
+    Lisättiin toinen html-tiedosto
+
+ index2.html | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit ebb9a0f78711e654533b93ea9db41459e5cf9457
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Mon Dec 31 18:35:09 2018 +0200
+
+    Osa 3. Viides tehtävä
+
+ index.html | 2 ++
+ 1 file changed, 2 insertions(+)
+
+commit ef47b8565889bbda664e2ba7b448a6c3bc5f3948
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Mon Dec 31 18:18:45 2018 +0200
+
+    Lisättiin uusi kansio, joka sisältää kuvan
+
+ "assets/Seitsem\303\244n_veljest\303\244.png" | Bin 0 -> 125514 bytes
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+
+commit 55a21ca54dc097d572135e4da671bd7838848b1a
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Mon Dec 31 18:07:11 2018 +0200
+
+    Osa 3. Neljäs tehtävä
+
+ index.html | 18 ++++++++++++++++++
+ 1 file changed, 18 insertions(+)
+
+commit e834734adbcbfeab017690785ee9a8aab012a4a4
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Mon Dec 31 04:26:49 2018 +0200
+
+    Osa 3. Kolmas tehtävä
+
+ index.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+commit 3e323981bdcedd48916aa2257b05e68818e88b0f
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Mon Dec 31 04:17:38 2018 +0200
+
+    Osa 3. Toinen tehtävä
+
+ index.html | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+commit f35b3254266a49774d0b9d0b150330fb33a07edf
+Author: AnnaKuokkanen <44625221+AnnaKuokkanen@users.noreply.github.com>
+Date:   Mon Dec 31 03:43:17 2018 +0200
+
+    Update index.html
+
+ index.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+commit 16f072092029faf3a34225891a42bb93b3f8c1a0
+Author: Anna Kuokkanen <kuokkanenanna9@gmail.com>
+Date:   Mon Dec 31 03:39:55 2018 +0200
+
+    Osa 3. Ensimmäinen tehtävä
+
+ index.html | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+
