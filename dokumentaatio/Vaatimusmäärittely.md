@@ -10,7 +10,7 @@ tulos asetetaan siihen nimimerkillä.
 ## Käyttöliittymä
 Sovelluksessa on kolme eri näkymää: alussa on tekstikenttä, johon syötetään nimimerkki ja Start-nappi. Toisessa näkymässä on 
 itse peli. Kolmannessa näkymässä on High score-lista ja kaksi nappia: Exit ja Play again.
-![Kuva](~/ot-harjoitustyo/dokumentaatio/liittyma.jpg)
+![Kuva](liittyma.jpg)
 
 ## Perusversion tarjoama toiminnallisuus
 - käyttäjä voi syöttää nimimerkin, kirjautumista ei tarvita
