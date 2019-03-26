@@ -1,1 +1,3 @@
-26.3: 3h, vaatimusmäärittely
+Päivämäärä | Tunnit | Kuvaus
+---------- | ------ | ------
+26.3 | 3 | vaatimusmäärittely
