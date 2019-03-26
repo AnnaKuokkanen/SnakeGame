@@ -25,11 +25,29 @@ public class MaksukorttiTest {
     
     @Test
     public void saldoKasvaaOikein() {
-        kortti.
+        kortti.lataaRahaa(10);
+        assertEquals("saldo: 0.20", kortti.toString());
+    }
+    
+    @Test
+    public void saldoVaheneeOikein() {
+        kortti.otaRahaa(10);
+        assertEquals("saldo: 0.0", kortti.toString());
     }
     
     @Test
     public void saldoEiOleNegatiivinen() {
-       
+       kortti.otaRahaa(20);
+       assertEquals("saldo: 0.10", kortti.toString());
+    }
+    
+    @Test 
+    public void metodiPalauttaaOikeanArvonKunRahatRiittavat() {
+        assertEquals(true, kortti.otaRahaa(10));
+    }
+    
+    @Test 
+    public void metodiPalauttaaOikeanArvonKunRahatEivatRiita() {
+        assertEquals(false, kortti.otaRahaa(20));
     }
 }
