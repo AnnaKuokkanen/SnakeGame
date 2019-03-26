@@ -7,7 +7,9 @@ Pelin lopuksi näytetään käyttäjän high score-lista.
 Peli ei vaadi sisäänkirjautumista, mutta kysyy alussa käyttäjältä nimimerkkiä. Jos käyttäjän pisteet yltävät high score-listalle, 
 tulos asetetaan siihen nimimerkillä.
 
-## Käyttöliittymäluonnos
+## Käyttöliittymä
+Sovelluksessa on kolme eri näkymää: alussa on tekstikenttä, johon syötetään nimimerkki ja Start-nappi. Toisessa näkymässä on 
+itse peli. Kolmannessa näkymässä on High score-lista ja kaksi nappia: Exit ja Play again.
 
 ## Perusversion tarjoama toiminnallisuus
 - käyttäjä voi syöttää nimimerkin, kirjautumista ei tarvita
