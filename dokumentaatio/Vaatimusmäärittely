@@ -1,9 +1,17 @@
 Sovelluksen tarkoitus
+Tarkoituksena luoda matopeli, jossa käyttäjä ohjaa nuolinäppäimillä matoa siten, että se ei törmää itseensä. 
+Samalla näytölle ilmestyy ruokapaloja joita syömällä madon pituus kasvaa. Peli päättyy silloin kun mato törmää johonkin. 
+Pelin lopuksi näytetään käyttäjän high score-lista.
 
 Käyttäjät
+Peli ei vaadi sisäänkirjautumista, mutta kysyy alussa käyttäjältä nimimerkkiä. Jos käyttäjän pisteet yltävät high score-listalle, 
+tulos asetetaan siihen nimimerkillä.
 
 Käyttöliittymäluonnos
 
 Perusversion tarjoama toiminnallisuus
+Olennaista on, että mato liikkuu nuolinäppäimillä ja peli päättyy kun mato törmää johonkin, minkä jälkeen käyttäjälle 
+näytetään hänen pisteensä. 
 
 Jatkokehitysideoita
+- eri tasoja (seinät, mato liikkuu nopeammin)
