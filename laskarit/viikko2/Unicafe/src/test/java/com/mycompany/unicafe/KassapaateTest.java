@@ -70,7 +70,7 @@ public class KassapaateTest {
         paate.syoEdullisesti(kortti2);
         assertEquals(1,paate.edullisiaLounaitaMyyty());
         assertEquals(260,kortti2.saldo());
-        assertEquals(true,kortti2.otaRahaa(240));
+        assertEquals(true,paate.syoEdullisesti(kortti2));
         assertEquals(100240, paate.kassassaRahaa());
     }
     
@@ -79,7 +79,7 @@ public class KassapaateTest {
         paate.syoMaukkaasti(kortti1);
         assertEquals(0,paate.maukkaitaLounaitaMyyty());
         assertEquals(100,kortti1.saldo());
-        assertEquals(false,kortti1.otaRahaa(400));
+        assertEquals(false,paate.syoMaukkaasti(kortti1));
         assertEquals(100000, paate.kassassaRahaa());
     }
     
@@ -88,7 +88,7 @@ public class KassapaateTest {
         paate.syoEdullisesti(kortti1);
         assertEquals(0,paate.edullisiaLounaitaMyyty());
         assertEquals(100,kortti1.saldo());
-        assertEquals(false,kortti1.otaRahaa(240));
+        assertEquals(false,paate.syoMaukkaasti(kortti1));
         assertEquals(100000, paate.kassassaRahaa());
     }
     
