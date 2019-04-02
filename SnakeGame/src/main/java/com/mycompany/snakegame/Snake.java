@@ -32,36 +32,15 @@ public class Snake {
     }
     
     public void moveLeft() {
-        if(this.head==0) {
-             this.x.remove(this.x.size()-1);
-             this.x.add()
-             this.head++;
-         }
-         else {
-
-         }
+       
     }
     
     public void moveUp() {
-        if(this.head==0) {
-            this.x.remove(this.x.size()-1);
-            this.x.add()
-            this.head++;
-        }
-        else {
-            
-        }
+        
     }
     
     public void moveDown() {
-        if(this.head==0) {
-            this.x.remove(this.x.size()-1);
-            this.x.add()
-            this.head++;
-        }
-        else {
-            
-        }
+        
     }
     
     public void grow() {
