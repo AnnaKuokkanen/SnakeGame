@@ -8,7 +8,7 @@ public class SnakeGameApplication extends Application {
     
      @Override
     public void start(Stage ikkuna) {
-        ikkuna.setTitle("Hei Maailma!");
+        ikkuna.setTitle("Snake game");
         ikkuna.show();
     }
 
