@@ -84,11 +84,14 @@ public class SnakeTest {
     
     @Test
     public void isCollisionWorking() {
-        //doesn't work
-        snake.grow();
-        
         assertEquals(false, snake.collision());
+        snake.grow();
+        snake.grow();
+        snake.grow();
+        snake.grow();
+        snake.moveDown();
         snake.moveRight();
+        snake.moveUp();
         
         assertEquals(true, snake.collision());
     }

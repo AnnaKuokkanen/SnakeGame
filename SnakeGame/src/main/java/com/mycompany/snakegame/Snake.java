@@ -68,7 +68,7 @@ public class Snake {
         int[][] head = getHeadCoordinates();
         int x = head[0][0];
         int y = head[1][0];
-        for(int i=0; i<this.x.size(); i++) {
+        for(int i=1; i<this.x.size(); i++) {
             if(x==this.x.get(i) && y==this.y.get(i)) {
                 return true;
             }
