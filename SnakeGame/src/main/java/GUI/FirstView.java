@@ -8,9 +8,11 @@ import javafx.scene.layout.FlowPane;
 
 public class FirstView {
     
+    private Button btn;
+    
     public Scene getScene() {
         TextField field = new TextField();
-        Button btn = new Button();
+        this.btn = new Button();
         btn.setText("START");
         
         FlowPane components = new FlowPane();
@@ -19,6 +21,10 @@ public class FirstView {
         Scene scene = new Scene(components);
         
         return scene;
+    }
+    
+    public Button getButton() {
+        return this.btn;
     }
 
 }
