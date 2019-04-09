@@ -1,9 +1,10 @@
 
-package com.mycompany.snakegame;
+package GUI;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
+import com.mycompany.snakegame.Snake;
 import com.mycompany.snakegame.Snake;
 
 public class SecondView {

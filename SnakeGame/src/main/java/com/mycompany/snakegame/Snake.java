@@ -64,8 +64,24 @@ public class Snake {
     }
     
     public boolean collision() {
+        int[][] head = getHeadCoordinates();
+        int x = head[0][0];
+        int y = head[1][0];
         for(int i=0; i<this.x.size(); i++) {
-            
+            if(x==this.x.get(i) && y==this.y.get(i)) {
+                return true;
+            }
+        }
+        return false;
+    }
+    
+    public boolean collision2(int x, int y) {
+        //this can be used for checking food.
+        int[][] head = getHeadCoordinates();
+        int i = head[0][0];
+        int j = head[1][0];
+        if(x==i && y==j) {
+            return true;
         }
         return false;
     }
@@ -86,6 +102,9 @@ public class Snake {
         //returns head's coordinates.
         int i=this.x.get(0);
         int j=this.y.get(0);
-        return new int[i][j];
+        int[][] dot = new int[2][1];
+        dot[0][0]=i;
+        dot[1][0]=j;
+        return dot;
     }
 }

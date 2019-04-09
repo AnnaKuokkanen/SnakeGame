@@ -1,11 +1,9 @@
 
-package com.mycompany.snakegame;
+package GUI;
 
 import javafx.stage.Stage;
 import javafx.application.Application;
-import com.mycompany.snakegame.FirstView;
-import com.mycompany.snakegame.SecondView;
-import com.mycompany.snakegame.ThirdView;
+import GUI.FirstView;
 import javafx.scene.Scene;
 
 public class SnakeGameApplication extends Application {

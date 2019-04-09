@@ -1,5 +1,5 @@
 
-package com.mycompany.snakegame;
+package GUI;
 
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
