@@ -1,5 +1,5 @@
 
-package com.mycompany.snakegame;
+package SnakeGameLogic;
 
 public class Food {
     

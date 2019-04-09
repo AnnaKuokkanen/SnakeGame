@@ -8,7 +8,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
-import com.mycompany.snakegame.Snake;
+import SnakeGameLogic.Snake;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;

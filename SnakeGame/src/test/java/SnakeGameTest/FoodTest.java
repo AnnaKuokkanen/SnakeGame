@@ -1,7 +1,7 @@
 
 package SnakeGameTest;
 
-import com.mycompany.snakegame.Food;
+import SnakeGameLogic.Food;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
