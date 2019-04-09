@@ -10,6 +10,7 @@ import com.mycompany.snakegame.Snake;
 public class SecondView {
 
     public Scene getScene() {
+        
         Pane board = new Pane();
         board.setPrefSize(300,200);
         board.getChildren().add(new Snake(30,50));

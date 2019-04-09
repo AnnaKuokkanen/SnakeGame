@@ -10,7 +10,7 @@ public class SnakeGameApplication extends Application {
     
     @Override
     public void start(Stage stage) {
-        Scene first = FirstView.getScene();
+        stage.setScene(FirstView.getScene());
     }
 
     public static void main(String[] args) {
