@@ -1,1 +1,1 @@
-![Kuva](SnakeGameArchitecture)
+![Kuva](SnakeGameArchitecture.jpg)
