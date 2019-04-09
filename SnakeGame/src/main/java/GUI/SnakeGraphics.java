@@ -11,11 +11,12 @@ import javafx.stage.Stage;
 import com.mycompany.snakegame.Snake;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Rectangle;
 
 public class SnakeGraphics {
    
     private Circle food;
-    private Polygon snake;
+    private Rectangle snake;
     
     public Scene getScene() {
         
@@ -32,15 +33,15 @@ public class SnakeGraphics {
     }
     
     public void setSnake(int i, int j) {
-        this.snake = new Polygon(i,j,100, 0, 100, 50, 0, 50);
+        this.snake = new Rectangle(i,j,10,10);
     }
     
-    public Polygon getSnake() {
+    public Rectangle getSnake() {
         return this.snake;
     }
     
     public void setFood(int i, int j) {
-        this.food = new Circle(30, 50, 10);
+        this.food = new Circle(i,j,5);
     }
     
     public Circle getFood() {

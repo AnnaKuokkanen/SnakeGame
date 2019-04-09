@@ -32,28 +32,65 @@ public class SnakeTest {
     }
     
     @Test
+    public void isLastremoved() {
+        snake.grow();
+        snake.removeLast();
+        assertEquals(1,snake.getLength());
+    }
+    
+    @Test
     public void isSnakeMovingUp() {
-        
+        ArrayList<Integer> x = new ArrayList<>();
+        ArrayList<Integer> y = new ArrayList<>();
+        x.add(1);
+        y.add(0);
+        snake.moveUp();
+        assertEquals(x,snake.getX());
+        assertEquals(y,snake.getY());
     }
     
     @Test
     public void isSnakeMovingDown() {
-    
+        ArrayList<Integer> x = new ArrayList<>();
+        ArrayList<Integer> y = new ArrayList<>();
+        x.add(1);
+        y.add(2);
+        snake.moveDown();
+        assertEquals(x,snake.getX());
+        assertEquals(y,snake.getY());
     }
     
     @Test 
     public void isSnakeMovingLeft() {
-    
+        ArrayList<Integer> x = new ArrayList<>();
+        ArrayList<Integer> y = new ArrayList<>();
+        x.add(0);
+        y.add(1);
+        snake.moveLeft();
+        assertEquals(x,snake.getX());
+        assertEquals(y,snake.getY());
     }
     
     @Test
     public void isSnakeMovingRight() {
-    
+        ArrayList<Integer> x = new ArrayList<>();
+        ArrayList<Integer> y = new ArrayList<>();
+        x.add(2);
+        y.add(1);
+        snake.moveRight();
+        assertEquals(x,snake.getX());
+        assertEquals(y,snake.getY());
     }
     
     @Test
-    public void isCollisionRight() {
-    
+    public void isCollisionWorking() {
+        //doesn't work
+        snake.grow();
+        
+        assertEquals(false, snake.collision());
+        snake.moveRight();
+        
+        assertEquals(true, snake.collision());
     }
     
     @Test

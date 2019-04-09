@@ -21,39 +21,40 @@ public class Snake {
     public void removeLast() {
         this.x.remove(this.x.size()-1);
         this.y.remove(this.y.size()-1);
+        this.length--;
     }
     
     public void moveLeft() {
         //we are deleting one from the tail and adding one to the head.
-        removeLast();
         int x=this.x.get(0);
         int y=this.y.get(0);
+        removeLast();
         this.x.add(0,x-1);
         this.y.add(0,y);
     }
     
     public void moveRight() {
-        removeLast();
         int x=this.x.get(0);
         int y=this.y.get(0);
+        removeLast();
         this.x.add(0,x+1);
         this.y.add(0,y);
     }
     
     public void moveUp() {
-        removeLast();
         int x=this.x.get(0);
         int y=this.y.get(0);
+        removeLast();
         this.x.add(0,x);
-        this.y.add(0,y+1);
+        this.y.add(0,y-1);
     }
     
     public void moveDown() {
-        removeLast();
         int x=this.x.get(0);
         int y=this.y.get(0);
+        removeLast();
         this.x.add(0,x);
-        this.y.add(0,y-1);
+        this.y.add(0,y+1);
     }
     
     public void grow() {
