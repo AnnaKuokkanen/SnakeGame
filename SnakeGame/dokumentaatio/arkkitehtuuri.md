@@ -1,1 +1,1 @@
-
+![Kuva](SnakeGameArchitecture)
