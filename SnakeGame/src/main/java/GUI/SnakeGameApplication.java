@@ -21,14 +21,13 @@ public class SnakeGameApplication extends Application {
         Scene scene2 = second.getScene();
         Scene scene3 = third.getScene();
         
-        Button btn = first.getButton();
-        /*btn.setOnAction((event) -> {
-            SecondView second = new SecondView();
-            Scene scene = second.getScene();
-            stage.setScene(scene);
-            stage.show();
-        });*/
+        Button btn1 = first.getButton();
+
         stage.setScene(scene1);
+        
+        btn1.setOnAction((event) -> {
+            stage.setScene(scene2);
+        });
         stage.show();
         
     }
