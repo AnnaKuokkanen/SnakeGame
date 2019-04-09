@@ -64,6 +64,9 @@ public class Snake {
     }
     
     public boolean collision() {
+        for(int i=0; i<this.x.size(); i++) {
+            
+        }
         return false;
     }
     

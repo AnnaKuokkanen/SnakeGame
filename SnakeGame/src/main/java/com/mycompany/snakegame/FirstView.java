@@ -1,41 +1,22 @@
 
 package com.mycompany.snakegame;
 
-import javafx.application.Application;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
-import com.mycompany.snakegame.SecondView;
+import javafx.scene.layout.FlowPane;
 
-public class FirstView extends Application {
+public class FirstView {
     
-    @Override
-    public void start(Stage stage) {
+    public Scene getScene() {
+        
         Button btn = new Button();
         btn.setText("START");
-        btn.setOnAction(new EventHandler<ActionEvent>() {
-            
-            @Override
-            public void handle(ActionEvent event) {
-                launch(SecondView.class);
-            }
-        });
         
-        StackPane root = new StackPane();
-        root.getChildren().add(btn);
+        FlowPane components = new FlowPane();
+        components.getChildren().add(btn);
+        Scene scene = new Scene(components);
         
-        Scene scene = new Scene(root, 300, 250);
-        
-        stage.setTitle("Snake Game");
-        stage.setScene(scene);
-        stage.show();
+        return scene;
     }
-    
-    /*public static void main(String[] args) {
-        launch(args);
-    }*/
-    
+
 }
