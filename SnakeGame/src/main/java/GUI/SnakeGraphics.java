@@ -49,7 +49,7 @@ public class SnakeGraphics {
         
         new AnimationTimer() {
             @Override 
-            public void handle(long nykyhetki) {
+            public void handle(long now) {
                 if(pressedButtons.getOrDefault(KeyCode.LEFT, false)) {
                     snake.setTranslateX(snakeLogic.getX().get(0)-1);
                     snake.setTranslateY(snakeLogic.getY().get(0));
@@ -92,34 +92,5 @@ public class SnakeGraphics {
     
     public Circle getFood() {
         return this.food;
-    }
-   
-    public void handle() {
-        new AnimationTimer() {
-            @Override 
-            public void handle(long nykyhetki) {
-                if(pressedButtons.getOrDefault(KeyCode.LEFT, false)) {
-                    snake.setTranslateX(snakeLogic.getX().get(0)-1);
-                    snake.setTranslateY(snakeLogic.getY().get(0));
-                    snakeLogic.moveLeft();
-                }
-                if(pressedButtons.getOrDefault(KeyCode.RIGHT, false)) {
-                    snake.setTranslateX(snakeLogic.getX().get(0)+1);
-                    snake.setTranslateY(snakeLogic.getY().get(0));
-                    snakeLogic.moveRight();
-                }
-                if(pressedButtons.getOrDefault(KeyCode.UP, false)) {
-                    snake.setTranslateX(snakeLogic.getX().get(0));
-                    snake.setTranslateY(snakeLogic.getY().get(0)-1);
-                    snakeLogic.moveUp();
-                }
-                if(pressedButtons.getOrDefault(KeyCode.DOWN, false)) {
-                    snake.setTranslateX(snakeLogic.getX().get(0));
-                    snake.setTranslateY(snakeLogic.getY().get(0)+1);
-                    snakeLogic.moveDown();
-                }
-            }
-        }.start();
-        
     }
 }

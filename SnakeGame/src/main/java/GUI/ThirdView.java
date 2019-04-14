@@ -8,10 +8,13 @@ import javafx.scene.layout.FlowPane;
 
 public class ThirdView {
     
+    private Button btn1;
+    private Button btn2;
+    
     public Scene getScene() {
         Label text = new Label("Game over!");
-        Button btn1 = new Button();
-        Button btn2 = new Button();
+        this.btn1 = new Button();
+        this.btn2 = new Button();
         btn1.setText("Play again");
         btn2.setText("Exit");
                 
@@ -24,5 +27,10 @@ public class ThirdView {
         
         return scene;
     }
-    
+    public Button getFirstButton() {
+        return btn1;
+    }
+    public Button getSecondButton() {
+        return btn2;
+    }
 }
