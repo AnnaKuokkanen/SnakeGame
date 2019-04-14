@@ -13,6 +13,7 @@ public class SnakeGameApplication extends Application {
     
     @Override
     public void start(Stage stage) {
+        stage.setTitle("Snake Game");
         FirstView first = new FirstView();
         SecondView second = new SecondView();
         ThirdView third = new ThirdView(); 
@@ -27,7 +28,9 @@ public class SnakeGameApplication extends Application {
         
         btn1.setOnAction((event) -> {
             stage.setScene(scene2);
+            //second.handle();
         });
+        
         stage.show();
         
     }
