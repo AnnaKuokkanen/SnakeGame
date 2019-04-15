@@ -4,4 +4,6 @@ Päivämäärä | Tunnit | Kuvaus
 2.4 | 7 | koodaamisen ja testien tekemisen aloittaminen
 7.4 | 2 | README.md parannettu ja koodia edistetty
 9.4 | 8 | Koodia edistetty, testejä laajennettu
-yht | 20 | 
+14.4 | 4 | Koodia edistetty
+15.4 | 2 | Koodia edistetty
+yht | 26 | 
