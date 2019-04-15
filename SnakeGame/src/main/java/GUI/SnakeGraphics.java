@@ -80,6 +80,7 @@ public class SnakeGraphics {
         this.snake = new Rectangle(i,j,10,10);
         this.snake.setTranslateX(i);
         this.snake.setTranslateY(j);
+        this.snakeLogic = new Snake(i,j);
     }
     
     public Rectangle getSnake() {
