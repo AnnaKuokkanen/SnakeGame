@@ -12,7 +12,6 @@ import SnakeGameLogic.Snake;
 import java.util.HashMap;
 import java.util.Map;
 import javafx.animation.AnimationTimer;
-import javafx.geometry.Point2D;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Circle;

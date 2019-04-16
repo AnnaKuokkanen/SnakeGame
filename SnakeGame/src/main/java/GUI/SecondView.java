@@ -14,9 +14,4 @@ public class SecondView {
         SnakeGraphics sg = new SnakeGraphics();
         return sg.getScene();
     }
-    
-    public void handle() {
-        SnakeGraphics sg = new SnakeGraphics();
-        sg.handle();
-    }
 }

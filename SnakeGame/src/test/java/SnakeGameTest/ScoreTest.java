@@ -20,11 +20,12 @@ public class ScoreTest {
 
     @Test
     public void isConstructorRight() {
-    
+        assertEquals(0,score.getScore());
     }
     
     @Test
     public void isScoreGrowing() {
-    
+        score.addScore();
+        assertEquals(1,score.getScore());
     }
 }
