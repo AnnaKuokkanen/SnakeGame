@@ -9,6 +9,8 @@ import javafx.scene.layout.StackPane;
 import javafx.scene.shape.Polygon;
 import javafx.stage.Stage;
 import SnakeGameLogic.Snake;
+import SnakeGameLogic.Score;
+import SnakeGameLogic.Food;
 import java.util.HashMap;
 import java.util.Map;
 import javafx.animation.AnimationTimer;
@@ -22,6 +24,8 @@ public class SnakeGraphics {
     private Circle food;
     private Rectangle snake;
     private Snake snakeLogic;
+    private Score score;
+    private Food foodLogic;
     private Map<KeyCode, Boolean> pressedButtons;
     
     public SnakeGraphics() {
@@ -49,6 +53,7 @@ public class SnakeGraphics {
         new AnimationTimer() {
             @Override 
             public void handle(long now) {
+                int direction=0;
                 if(pressedButtons.getOrDefault(KeyCode.LEFT, false)) {
                     snake.setTranslateX(snakeLogic.getX().get(0)-1);
                     snake.setTranslateY(snakeLogic.getY().get(0));
@@ -69,6 +74,7 @@ public class SnakeGraphics {
                     snake.setTranslateY(snakeLogic.getY().get(0)+1);
                     snakeLogic.moveDown();
                 }
+                
             }
         }.start();
         
