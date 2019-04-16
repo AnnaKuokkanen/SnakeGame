@@ -1,1 +1,2 @@
-![Kuva](SnakeGameArchitecture.jpg)
+![Kuva arkkitehtuurista](SnakeGameArchitecture.jpg) 
+![Sekvenssikaavio](Sekvenssikaavio.jpg)
