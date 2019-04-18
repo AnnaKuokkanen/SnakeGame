@@ -13,6 +13,7 @@ import SnakeGameLogic.Score;
 import SnakeGameLogic.Food;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Random;
 import javafx.animation.AnimationTimer;
 import javafx.scene.input.KeyCode;
 import javafx.scene.layout.Pane;
@@ -30,12 +31,13 @@ public class SnakeGraphics {
     
     public SnakeGraphics() {
         this.pressedButtons = new HashMap<>();
+        this.score = new Score();
     }
     
     public Scene getScene() {
         
         Pane board = new Pane();
-        board.setPrefSize(300,200);
+        board.setPrefSize(900,600);
         setSnake(30,50);
         setFood(10,10);
         board.getChildren().add(this.snake);
@@ -53,7 +55,6 @@ public class SnakeGraphics {
         new AnimationTimer() {
             @Override 
             public void handle(long now) {
-                int direction=0;
                 if(pressedButtons.getOrDefault(KeyCode.LEFT, false)) {
                     snake.setTranslateX(snakeLogic.getX().get(0)-1);
                     snake.setTranslateY(snakeLogic.getY().get(0));
@@ -74,7 +75,13 @@ public class SnakeGraphics {
                     snake.setTranslateY(snakeLogic.getY().get(0)+1);
                     snakeLogic.moveDown();
                 }
-                
+                if(collisionFood()) {
+                    score.addScore();
+                    moveFood();
+                }
+                if(collision()) {
+                    stop();
+                }
             }
         }.start();
         
@@ -94,9 +101,33 @@ public class SnakeGraphics {
     
     public void setFood(int i, int j) {
         this.food = new Circle(i,j,5);
+        this.foodLogic = new Food(i,j);
     }
     
     public Circle getFood() {
         return this.food;
     }
+    
+    public void moveFood() {
+        Random rand = new Random();
+        int x = rand.nextInt(850);
+        int y = rand.nextInt(550);
+        
+        setFood(x,y);
+    }
+    
+    public boolean collisionFood() {
+        if(snakeLogic.collision2(foodLogic.getX(),foodLogic.getY())) {
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean collision() {
+        if(snakeLogic.getX().get(0)<0 || snakeLogic.getY().get(0)<0 || snakeLogic.getX().get(0)>900 || snakeLogic.getY().get(0)>600) {
+            return true;
+        }
+        return false;
+    }
+    
 }

@@ -31,6 +31,11 @@ public class SnakeGameApplication extends Application {
         btn1.setOnAction((event) -> {
             stage.setScene(scene2);
         });
+        
+        if(SnakeGraphics.collision()) {
+            stage.setScene(scene3);
+        }
+        
         btn2.setOnAction((event) -> {
             stage.setScene(scene2);
         });
