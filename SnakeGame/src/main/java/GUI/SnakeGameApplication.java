@@ -6,6 +6,7 @@ import javafx.application.Application;
 import GUI.FirstView;
 import GUI.SecondView;
 import GUI.ThirdView;
+import GUI.SnakeGraphics;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
@@ -17,6 +18,8 @@ public class SnakeGameApplication extends Application {
         FirstView first = new FirstView();
         SecondView second = new SecondView();
         ThirdView third = new ThirdView(); 
+        SnakeGraphics sg = new SnakeGraphics();
+        boolean stopped = sg.collision();
         
         Scene scene1 = first.getScene();
         Scene scene2 = second.getScene();
@@ -32,7 +35,7 @@ public class SnakeGameApplication extends Application {
             stage.setScene(scene2);
         });
         
-        if(SnakeGraphics.collision()) {
+        if(stopped) {
             stage.setScene(scene3);
         }
         
