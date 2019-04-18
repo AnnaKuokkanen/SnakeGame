@@ -77,9 +77,9 @@ public class SnakeGraphics {
                 }
                 if(collisionFood()) {
                     score.addScore();
-                    moveFood();
+                    moveFood(board);
                 }
-                if(collision()) {
+                if(collisionWall()) {
                     stop();
                 }
             }
@@ -108,11 +108,11 @@ public class SnakeGraphics {
         return this.food;
     }
     
-    public void moveFood() {
+    public void moveFood(Pane pane) {
         Random rand = new Random();
         int x = rand.nextInt(850);
         int y = rand.nextInt(550);
-        
+        pane.getChildren().remove(this.food);
         setFood(x,y);
     }
     
@@ -123,7 +123,7 @@ public class SnakeGraphics {
         return false;
     }
     
-    public boolean collision() {
+    public boolean collisionWall() {
         if(snakeLogic.getX().get(0)<0 || snakeLogic.getY().get(0)<0 || snakeLogic.getX().get(0)>900 || snakeLogic.getY().get(0)>600) {
             return true;
         }

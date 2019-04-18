@@ -4,13 +4,11 @@ package SnakeGameLogic;
 import java.util.ArrayList;
 
 public class Snake {
-    
     private ArrayList<Integer> x;
     private ArrayList<Integer> y;
     private int length;
     
     public Snake(int i, int j) {
-        
         this.length=1;
         this.x = new ArrayList<>();
         this.x.add(i);
