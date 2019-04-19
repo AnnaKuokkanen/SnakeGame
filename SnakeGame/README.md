@@ -19,8 +19,22 @@ Sovellus on klassinen matopeli.
 
 ## Komentorivitoiminnot
 
+Tässä esitellään komentorivin komennot, joilla seuraavat toimenpiteet suoritetaan
+
 ### Testaus
 
->mvn test
+>mvn test (suorittaa testit)
 
-### Suoritettavan jarin generointi
+>mvn jacoco:report (luo testikattavuusraportin)
+
+### Ohjelman suorittavan jarin generointi
+
+>mvn package (luo jar-tiedoston hakemistoon target)
+
+### JavaDoc
+
+>mvn javadoc:javadoc (generoi javaDocin)
+
+### Checkstyle
+
+>mvn jxr:jxr checkstyle:checkstyle (suorittaa tiedostoon checkstyle.xml määrittelemät tarkistukset)
