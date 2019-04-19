@@ -7,4 +7,6 @@ Päivämäärä | Tunnit | Kuvaus
 14.4 | 4 | Koodia edistetty
 15.4 | 2 | Koodia edistetty
 16.4 | 1 | Koodia edistetty
-yht | 27 | 
+18.4 | 2 | Kooida edistetty
+19.4 | 3 | 
+yht | 32 | 
