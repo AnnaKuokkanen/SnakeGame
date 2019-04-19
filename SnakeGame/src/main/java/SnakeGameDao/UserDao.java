@@ -12,12 +12,12 @@ public class UserDao implements Dao<Integer, String>{
     
     @Override
     public Integer read(String s) throws SQLException {
-    
+        return 0;
     }
     
     @Override
     public Integer update(Integer i) throws SQLException {
-    
+        return 0;
     }
     
     @Override
@@ -26,6 +26,6 @@ public class UserDao implements Dao<Integer, String>{
     }
     @Override
     public List<Integer> list() throws SQLException{
-    
+        return new ArrayList<Integer>();
     }
 }

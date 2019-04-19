@@ -19,7 +19,7 @@ public class SnakeGameApplication extends Application {
         SecondView second = new SecondView();
         ThirdView third = new ThirdView(); 
         SnakeGraphics sg = new SnakeGraphics();
-        boolean stopped = sg.collision();
+        //boolean stopped = sg.collisionWall();
         
         Scene scene1 = first.getScene();
         Scene scene2 = second.getScene();
@@ -35,9 +35,9 @@ public class SnakeGameApplication extends Application {
             stage.setScene(scene2);
         });
         
-        if(stopped) {
+        /*if(stopped) {
             stage.setScene(scene3);
-        }
+        }*/
         
         btn2.setOnAction((event) -> {
             stage.setScene(scene2);
