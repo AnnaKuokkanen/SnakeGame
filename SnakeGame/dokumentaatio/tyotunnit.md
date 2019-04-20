@@ -9,4 +9,5 @@ Päivämäärä | Tunnit | Kuvaus
 16.4 | 1 | Edistetty koodia
 18.4 | 2 | Edistetty koodia
 19.4 | 3 | Parannettu dokumentaatiota
+20.4 | 6 | Lisätty toiminnallisuutta
 yht | 32 | 
