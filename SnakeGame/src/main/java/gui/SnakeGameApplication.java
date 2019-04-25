@@ -1,33 +1,48 @@
 
-package GUI;
+package gui;
 
 import javafx.stage.Stage;
 import javafx.application.Application;
-import GUI.FirstView;
-import GUI.SecondView;
-import GUI.ThirdView;
-import GUI.SnakeGraphics;
+import gui.FirstView;
+import gui.SecondView;
+import gui.ThirdView;
+import gui.SnakeGraphics;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
 public class SnakeGameApplication extends Application {
     
+    private FirstView first;
+    private SecondView second;
+    private ThirdView third;
+    
+    private Scene scene1;
+    private Scene scene2;
+    private Scene scene3;
+    
+    private Button btn1;
+    private Button btn2;
+    private Button btn3;
+    private Button btn4;
+    
+    public SnakeGameApplication() {
+        this.first = new FirstView();
+        this.second = new SecondView(); 
+        this.third = new ThirdView();
+        
+        this.scene1 = first.getScene();
+        this.scene2 = second.getScene();
+        this.scene3 = third.getScene();
+        
+        this.btn1 = first.getButton(); //from first to second
+        this.btn4 = second.getButton(); //from second to third
+        this.btn2 = third.getFirstButton(); //from third to second
+        this.btn3 = third.getSecondButton(); //from third to first
+    }
+    
     @Override
     public void start(Stage stage) {
         stage.setTitle("Snake Game");
-        FirstView first = new FirstView();
-        SecondView second = new SecondView();
-        ThirdView third = new ThirdView(); 
-        SnakeGraphics sg = new SnakeGraphics();
-        //boolean stopped = sg.collisionWall();
-        
-        Scene scene1 = first.getScene();
-        Scene scene2 = second.getScene();
-        Scene scene3 = third.getScene();
-        
-        Button btn1 = first.getButton();
-        Button btn2 = third.getFirstButton();
-        Button btn3 = third.getSecondButton();
 
         stage.setScene(scene1);
         
@@ -35,15 +50,17 @@ public class SnakeGameApplication extends Application {
             stage.setScene(scene2);
         });
         
-        /*if(stopped) {
+        btn4.setOnAction((event) -> {
             stage.setScene(scene3);
-        }*/
+        });
         
         btn2.setOnAction((event) -> {
-            stage.setScene(scene2);
+            second.setup();
+            stage.setScene(second.getScene());
         });
+        
         btn3.setOnAction((event) -> {
-            stage.setScene(scene1);
+            stage.setScene(first.getScene());
         });
             
         stage.show();

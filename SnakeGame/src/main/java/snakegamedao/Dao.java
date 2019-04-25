@@ -1,10 +1,10 @@
 
-package SnakeGameDao;
+package snakegamedao;
 
 import java.sql.*;
 import java.util.*;
 
-public interface Dao<O,K> {
+public interface Dao<O, K> {
     void create(O object) throws SQLException;
     O read(K key) throws SQLException;
     O update(O object) throws SQLException;

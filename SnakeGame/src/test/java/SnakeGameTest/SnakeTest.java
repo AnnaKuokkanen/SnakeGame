@@ -1,7 +1,7 @@
 
 package SnakeGameTest;
 
-import SnakeGameLogic.Snake;
+import snakegamelogic.Snake;
 import java.util.ArrayList;
 import org.junit.Before;
 import org.junit.Test;

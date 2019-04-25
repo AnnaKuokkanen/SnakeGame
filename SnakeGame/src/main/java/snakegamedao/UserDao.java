@@ -1,10 +1,18 @@
 
-package SnakeGameDao;
+package snakegamedao;
 
 import java.sql.*;
 import java.util.*;
-
-public class UserDao implements Dao<Integer, String>{
+/*import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Component;
+*/
+public class UserDao implements Dao<Integer, String> {
+    
+    //@Autowired
+    //JdbcTemplate jdbcTemplate;
+    
     @Override
     public void create(Integer i) throws SQLException {
     
@@ -25,7 +33,7 @@ public class UserDao implements Dao<Integer, String>{
     
     }
     @Override
-    public List<Integer> list() throws SQLException{
+    public List<Integer> list() throws SQLException {
         return new ArrayList<Integer>();
     }
 }
