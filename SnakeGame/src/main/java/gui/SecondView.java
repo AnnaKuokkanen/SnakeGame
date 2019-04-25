@@ -25,4 +25,7 @@ public class SecondView {
     public void setup() {
         sg.setup();
     }
+    public int getScore() {
+        return sg.getScore();
+    }
 }

@@ -26,6 +26,7 @@ public class SnakeGameApplication extends Application {
     private Button btn4;
     
     public SnakeGameApplication() {
+        
         this.first = new FirstView();
         this.second = new SecondView(); 
         this.third = new ThirdView();
@@ -47,11 +48,13 @@ public class SnakeGameApplication extends Application {
         stage.setScene(scene1);
         
         btn1.setOnAction((event) -> {
-            second.setup();
+            //second.setup();
             stage.setScene(scene2);
         });
         
         btn4.setOnAction((event) -> {
+            int score = second.getScore();
+            third.setScoreText(score);
             stage.setScene(scene3);
         });
         
