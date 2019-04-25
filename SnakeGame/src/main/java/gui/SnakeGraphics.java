@@ -39,7 +39,6 @@ public class SnakeGraphics {
         setSnake(30, 50);
         setFood(100, 100);
         setWall(board);
-        //board.getChildren().remove(btn);
     }
     
     public Scene getScene() {
@@ -209,7 +208,6 @@ public class SnakeGraphics {
         this.snake = new ArrayList<>();
         this.board = new Pane();
         board.setPrefSize(900, 600);
-        //this.btn = new Button("STOP");
         setSnake(30, 50);
         setFood(100, 100);
         setWall(board);

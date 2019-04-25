@@ -10,12 +10,15 @@ public class FirstView {
     
     private Button btn;
     private String name;
+    private TextField field;
+    
+    public FirstView() {
+        this.btn = new Button("START");
+        this.field = new TextField();
+    }
     
     public Scene getScene() {
-        TextField field = new TextField();
         this.name = field.getText();
-        this.btn = new Button();
-        btn.setText("START");
         
         FlowPane components = new FlowPane();
         components.getChildren().add(btn);
@@ -26,7 +29,7 @@ public class FirstView {
     }
     
     public void setup() {
-    
+        
     }
     
     public Button getButton() {

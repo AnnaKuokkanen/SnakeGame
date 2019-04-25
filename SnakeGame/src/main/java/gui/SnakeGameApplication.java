@@ -47,6 +47,7 @@ public class SnakeGameApplication extends Application {
         stage.setScene(scene1);
         
         btn1.setOnAction((event) -> {
+            second.setup();
             stage.setScene(scene2);
         });
         
