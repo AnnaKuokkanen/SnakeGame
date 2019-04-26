@@ -43,7 +43,7 @@ public class SnakeTest {
         ArrayList<Integer> x = new ArrayList<>();
         ArrayList<Integer> y = new ArrayList<>();
         x.add(1);
-        y.add(-9);
+        y.add(0);
         snake.moveUp();
         assertEquals(x,snake.getX());
         assertEquals(y,snake.getY());
@@ -54,7 +54,7 @@ public class SnakeTest {
         ArrayList<Integer> x = new ArrayList<>();
         ArrayList<Integer> y = new ArrayList<>();
         x.add(1);
-        y.add(11);
+        y.add(2);
         snake.moveDown();
         assertEquals(x,snake.getX());
         assertEquals(y,snake.getY());
@@ -64,7 +64,7 @@ public class SnakeTest {
     public void isSnakeMovingLeft() {
         ArrayList<Integer> x = new ArrayList<>();
         ArrayList<Integer> y = new ArrayList<>();
-        x.add(-9);
+        x.add(0);
         y.add(1);
         snake.moveLeft();
         assertEquals(x,snake.getX());
@@ -75,7 +75,7 @@ public class SnakeTest {
     public void isSnakeMovingRight() {
         ArrayList<Integer> x = new ArrayList<>();
         ArrayList<Integer> y = new ArrayList<>();
-        x.add(11);
+        x.add(2);
         y.add(1);
         snake.moveRight();
         assertEquals(x,snake.getX());
