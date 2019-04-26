@@ -123,7 +123,9 @@ public class Snake {
     public int getLength() {
         return this.length;
     }
-    
+    /**
+     * @return two-dimensional array containing snake's head coordinates
+     */
     public int[][] getHeadCoordinates() {
         //returns head's coordinates.
         int i = this.x.get(0);
