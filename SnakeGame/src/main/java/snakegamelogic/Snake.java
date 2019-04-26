@@ -61,7 +61,7 @@ public class Snake {
     
     public void grow() {
         //we're adding a new spot to the tail.
-        this.x.add(this.x.get(x.size() - 1) + 10);
+        this.x.add(this.x.get(x.size() - 1) + 1);
         this.y.add(this.y.get(y.size() - 1));
         this.length++;
     }

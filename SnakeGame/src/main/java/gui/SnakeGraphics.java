@@ -158,8 +158,8 @@ public class SnakeGraphics {
     
     public void moveFood(Pane pane) {
         Random rand = new Random();
-        int x = rand.nextInt(870) - 20;
-        int y = rand.nextInt(570) - 40;
+        int x = rand.nextInt(865) + 10;
+        int y = rand.nextInt(565) + 10;
         pane.getChildren().remove(this.food);
         setFood(x, y);
         pane.getChildren().add(food);
@@ -181,12 +181,13 @@ public class SnakeGraphics {
     
     public void grow() {
         this.snakeLogic.grow();
-        
-        double x = snakeLogic.getX().get(snakeLogic.getX().size() - 1);
-        double y = snakeLogic.getY().get(snakeLogic.getY().size() - 1);
-        
-        snake.add(new Rectangle(x, y, 10, 10));
-        board.getChildren().add(snake.get(snake.size() - 1));
+        //double x = snakeLogic.getX().get(snakeLogic.getX().size() - 1);
+        //double y = snakeLogic.getY().get(snakeLogic.getY().size() - 1);
+        double x = snake.get(snake.size() - 1).getX() + 10;
+        double y = snake.get(snake.size() - 1).getY();
+        Rectangle newBit = new Rectangle(x, y, 10, 10);
+        snake.add(newBit);
+        board.getChildren().add(newBit);
     }
     
     public void setup() {
