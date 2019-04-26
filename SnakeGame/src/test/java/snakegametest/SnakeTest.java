@@ -17,7 +17,7 @@ public class SnakeTest {
     }
     
     @Test
-    public void isConstructorhRight() {
+    public void isConstructorRight() {
         ArrayList<Integer> list = new ArrayList<>();
         list.add(1);
         assertEquals(list, snake.getX());
