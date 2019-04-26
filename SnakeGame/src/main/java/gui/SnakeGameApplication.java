@@ -6,6 +6,8 @@ import javafx.application.Application;
 import gui.FirstView;
 import gui.SecondView;
 import gui.ThirdView;
+import java.io.FileWriter;
+import java.io.IOException;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
@@ -25,6 +27,8 @@ public class SnakeGameApplication extends Application {
     private Button btn4;
     
     private int run;
+    private int score;
+    private String name;
     
     public SnakeGameApplication() {
         
@@ -45,17 +49,17 @@ public class SnakeGameApplication extends Application {
     }
     
     @Override
-    public void start(Stage stage) {
+    public void start(Stage stage) throws IOException {
         stage.setTitle("Snake Game");
         
-        stage.setScene(scene1);
+        stage.setScene(scene1);  
         
         btn1.setOnAction((event) -> {
+            this.name = first.getText();
             run++;
             if (run == 1) {
                 stage.setScene(scene2);
-            }
-            else {
+            } else {
                 second.setup();
                 Scene newScene = second.getScene();
                 stage.setScene(newScene);
@@ -63,7 +67,7 @@ public class SnakeGameApplication extends Application {
         });
         
         btn4.setOnAction((event) -> {
-            int score = second.getScore();
+            this.score = second.getScore();
             third.setScoreText(score);
             stage.setScene(scene3);
         });
@@ -76,11 +80,24 @@ public class SnakeGameApplication extends Application {
         
         btn3.setOnAction((event) -> {
             stage.setScene(scene1);
-        });
-            
+        });    
+        
         stage.show();
     }
+    
+    public void write(String name, int score) throws IOException {
+        FileWriter writer = new FileWriter("highscore.txt");
+        try {
+            writer.write(name + ": " + score);
+        } catch (IOException e) {
+            System.out.println("Error: " + e.getMessage());
+        }
+    }
 
+    /*public boolean read() {
+    
+    }*/
+    
     public static void main(String[] args) {
         launch(SnakeGameApplication.class);
     }

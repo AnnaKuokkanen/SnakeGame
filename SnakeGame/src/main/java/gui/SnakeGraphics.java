@@ -60,47 +60,35 @@ public class SnakeGraphics {
             int direction = 0;
             public void move(int i) {
                 //0 = down; 1 = left; 2 = up; 3 = right
-                //in commentaries other approach (snake moves very fast and animation doesn't stop as supposed to)
-                
-                
-                /*double x = snake.get(0).getX();
-                double y = snake.get(0).getY();
-                board.getChildren().remove(snake.get(0));
-                snake.remove(0);*/
                 
                 if (i == 0) {
+                    board.getChildren().remove(snake.get(snake.size() - 1));
+                    snake.remove(snake.size() - 1);
                     snakeLogic.moveDown();
-                    for (int j = 0; j < snake.size(); j++) {
-                        snake.get(j).setTranslateX(snakeLogic.getX().get(j));
-                        snake.get(j).setTranslateY(snakeLogic.getY().get(j) + 1);
-                    }
-                    //snake.add(0, new Rectangle(x, y+10, 10, 10));
+                    snake.add(0, new Rectangle(snakeLogic.getX().get(0), snakeLogic.getY().get(0), 10, 10));
+                    board.getChildren().add(snake.get(0));
                 }
                 if (i == 1) {
+                    board.getChildren().remove(snake.get(snake.size() - 1));
+                    snake.remove(snake.size() - 1);
                     snakeLogic.moveLeft();
-                    for (int j = 0; j < snake.size(); j++) {
-                        snake.get(j).setTranslateX(snakeLogic.getX().get(j) - 1);
-                        snake.get(j).setTranslateY(snakeLogic.getY().get(j));
-                    }
-                    //snake.add(0, new Rectangle(x-10, y, 10, 10));
+                    snake.add(0, new Rectangle(snakeLogic.getX().get(0), snakeLogic.getY().get(0), 10, 10));
+                    board.getChildren().add(snake.get(0));
                 }
                 if (i == 2) {
+                    board.getChildren().remove(snake.get(snake.size() - 1));
+                    snake.remove(snake.size() - 1);
                     snakeLogic.moveUp();
-                    for (int j = 0; j < snake.size(); j++) {
-                        snake.get(j).setTranslateX(snakeLogic.getX().get(j));
-                        snake.get(j).setTranslateY(snakeLogic.getY().get(j) - 1);
-                    }
-                    //snake.add(0, new Rectangle(x, y-10, 10, 10));
+                    snake.add(0, new Rectangle(snakeLogic.getX().get(0), snakeLogic.getY().get(0), 10, 10));
+                    board.getChildren().add(snake.get(0));
                 }
                 if (i == 3) {
+                    board.getChildren().remove(snake.get(snake.size() - 1));
+                    snake.remove(snake.size() - 1);
                     snakeLogic.moveRight();
-                    for (int j = 0; j < snake.size(); j++) {
-                        snake.get(j).setTranslateX(snakeLogic.getX().get(j) + 1);
-                        snake.get(j).setTranslateY(snakeLogic.getY().get(j));
-                    }
-                    //snake.add(0, new Rectangle(x+10, y, 10, 10));
+                    snake.add(0, new Rectangle(snakeLogic.getX().get(0), snakeLogic.getY().get(0), 10, 10));
+                    board.getChildren().add(snake.get(0));
                 }
-                //board.getChildren().add(snake.get(snake.size()-1));
             }
             @Override 
             public void handle(long now) {
@@ -185,7 +173,7 @@ public class SnakeGraphics {
     }
     
     public boolean collisionWall() {
-        if (snakeLogic.getX().get(0) < -20 || snakeLogic.getY().get(0) < -40 || snakeLogic.getX().get(0) > 850 || snakeLogic.getY().get(0) > 530) {
+        if (snakeLogic.getX().get(0) < 10 || snakeLogic.getY().get(0) < 10 || snakeLogic.getX().get(0) > 880 || snakeLogic.getY().get(0) > 580) {
             return true;
         }
         return false;
@@ -194,10 +182,10 @@ public class SnakeGraphics {
     public void grow() {
         this.snakeLogic.grow();
         
-        double x = snake.get(snake.size() - 1).getX();
-        double y = snake.get(snake.size() - 1).getY();
+        double x = snakeLogic.getX().get(snakeLogic.getX().size() - 1);
+        double y = snakeLogic.getY().get(snakeLogic.getY().size() - 1);
         
-        snake.add(new Rectangle(x + 10, y, 10, 10));
+        snake.add(new Rectangle(x, y, 10, 10));
         board.getChildren().add(snake.get(snake.size() - 1));
     }
     

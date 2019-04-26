@@ -1,5 +1,5 @@
 
-package SnakeGameTest;
+package snakegametest;
 
 import snakegamelogic.Food;
 import org.junit.Before;

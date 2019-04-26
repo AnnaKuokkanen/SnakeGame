@@ -1,4 +1,4 @@
-package SnakeGameTest;
+package snakegametest;
 
 
 import org.junit.After;

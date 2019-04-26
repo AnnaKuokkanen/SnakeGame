@@ -28,10 +28,6 @@ public class FirstView {
         return scene;
     }
     
-    public void setup() {
-        
-    }
-    
     public Button getButton() {
         return this.btn;
     }

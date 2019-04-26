@@ -29,6 +29,7 @@ public class Snake {
         removeLast();
         this.x.add(0 , x - 1);
         this.y.add(0 , y);
+        this.length++;
     }
     
     public void moveRight() {
@@ -37,6 +38,7 @@ public class Snake {
         removeLast();
         this.x.add(0, x + 1);
         this.y.add(0, y);
+        this.length++;
     }
     
     public void moveUp() {
@@ -45,6 +47,7 @@ public class Snake {
         removeLast();
         this.x.add(0, x);
         this.y.add(0, y - 1);
+        this.length++;
     }
     
     public void moveDown() {
@@ -53,11 +56,12 @@ public class Snake {
         removeLast();
         this.x.add(0, x);
         this.y.add(0, y + 1);
+        this.length++;
     }
     
     public void grow() {
         //we're adding a new spot to the tail.
-        this.x.add(this.x.get(x.size() - 1) + 1);
+        this.x.add(this.x.get(x.size() - 1) + 10);
         this.y.add(this.y.get(y.size() - 1));
         this.length++;
     }
