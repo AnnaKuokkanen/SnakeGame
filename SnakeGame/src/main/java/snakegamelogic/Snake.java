@@ -80,7 +80,10 @@ public class Snake {
         this.y.add(this.y.get(y.size() - 1));
         this.length++;
     }
-    
+    /**
+     * Checks if snake has collided with itself
+     * @return boolean value
+     */
     public boolean collision() {
         int[][] head = getHeadCoordinates();
         int x = head[0][0];
@@ -92,7 +95,12 @@ public class Snake {
         }
         return false;
     }
-    
+    /**
+     * Checks if snake has collided with some spot
+     * @param x is for x-coordinate
+     * @param y is for y-coordinate 
+     * @return boolean value true if has collided
+     */
     public boolean collision2(int x, int y) {
         //this can be used for checking food.
         int[][] head = getHeadCoordinates();
