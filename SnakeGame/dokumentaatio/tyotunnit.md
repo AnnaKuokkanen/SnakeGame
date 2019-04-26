@@ -10,4 +10,6 @@ Päivämäärä | Tunnit | Kuvaus
 18.4 | 2 | Edistetty koodia
 19.4 | 3 | Parannettu dokumentaatiota
 20.4 | 6 | Lisätty toiminnallisuutta
-yht | 32 | 
+22.4 | 5 | Lisätty toiminnallisuutta
+25.4 | 4 | Edistetty koodia
+yht | 47 | 

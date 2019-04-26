@@ -6,7 +6,6 @@ import javafx.application.Application;
 import gui.FirstView;
 import gui.SecondView;
 import gui.ThirdView;
-import gui.SnakeGraphics;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
@@ -25,6 +24,8 @@ public class SnakeGameApplication extends Application {
     private Button btn3;
     private Button btn4;
     
+    private int run;
+    
     public SnakeGameApplication() {
         
         this.first = new FirstView();
@@ -39,17 +40,26 @@ public class SnakeGameApplication extends Application {
         this.btn4 = second.getButton(); //from second to third
         this.btn2 = third.getFirstButton(); //from third to second
         this.btn3 = third.getSecondButton(); //from third to first
+        
+        this.run = 0;
     }
     
     @Override
     public void start(Stage stage) {
         stage.setTitle("Snake Game");
-
+        
         stage.setScene(scene1);
         
         btn1.setOnAction((event) -> {
-            //second.setup();
-            stage.setScene(scene2);
+            run++;
+            if (run == 1) {
+                stage.setScene(scene2);
+            }
+            else {
+                second.setup();
+                Scene newScene = second.getScene();
+                stage.setScene(newScene);
+            }
         });
         
         btn4.setOnAction((event) -> {
@@ -60,19 +70,18 @@ public class SnakeGameApplication extends Application {
         
         btn2.setOnAction((event) -> {
             second.setup();
-            stage.setScene(second.getScene());
+            Scene newScene = second.getScene();
+            stage.setScene(newScene);
         });
         
         btn3.setOnAction((event) -> {
-            stage.setScene(first.getScene());
+            stage.setScene(scene1);
         });
             
         stage.show();
-        
     }
 
     public static void main(String[] args) {
         launch(SnakeGameApplication.class);
     }
-    
 }
