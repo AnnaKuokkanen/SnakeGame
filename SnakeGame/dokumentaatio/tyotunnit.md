@@ -12,4 +12,5 @@ Päivämäärä | Tunnit | Kuvaus
 20.4 | 6 | Lisätty toiminnallisuutta
 22.4 | 5 | Lisätty toiminnallisuutta
 25.4 | 4 | Edistetty koodia
-yht | 47 | 
+26.4 | 5 | Parannettu dokumentaatiota, lisätty toiminnallisuutta
+yht | 52 | 
