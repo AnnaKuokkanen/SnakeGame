@@ -6,8 +6,8 @@ import javafx.application.Application;
 import gui.FirstView;
 import gui.SecondView;
 import gui.ThirdView;
-import java.io.FileWriter;
-import java.io.IOException;
+import snakegamelogic.Database;
+import snakegamelogic.Highscore;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
@@ -49,7 +49,7 @@ public class SnakeGameApplication extends Application {
     }
     
     @Override
-    public void start(Stage stage) throws IOException {
+    public void start(Stage stage) {
         stage.setTitle("Snake Game");
         
         stage.setScene(scene1);  
@@ -84,19 +84,6 @@ public class SnakeGameApplication extends Application {
         
         stage.show();
     }
-    
-    public void write(String name, int score) throws IOException {
-        FileWriter writer = new FileWriter("highscore.txt");
-        try {
-            writer.write(name + ": " + score);
-        } catch (IOException e) {
-            System.out.println("Error: " + e.getMessage());
-        }
-    }
-
-    /*public boolean read() {
-    
-    }*/
     
     public static void main(String[] args) {
         launch(SnakeGameApplication.class);
