@@ -35,5 +35,8 @@ public class FirstView {
     public String getText() {
         return this.name;
     }
+    public void clearText() {
+        this.field.clear();
+    }
 
 }

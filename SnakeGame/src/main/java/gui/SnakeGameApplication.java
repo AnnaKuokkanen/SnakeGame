@@ -6,8 +6,7 @@ import javafx.application.Application;
 import gui.FirstView;
 import gui.SecondView;
 import gui.ThirdView;
-import snakegamelogic.Database;
-import snakegamelogic.Highscore;
+import snakegamedao.FileHighscoreDao;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
@@ -30,6 +29,8 @@ public class SnakeGameApplication extends Application {
     private int score;
     private String name;
     
+    private FileHighscoreDao dao;
+    
     public SnakeGameApplication() {
         
         this.first = new FirstView();
@@ -46,6 +47,11 @@ public class SnakeGameApplication extends Application {
         this.btn3 = third.getSecondButton(); //from third to first
         
         this.run = 0;
+        try {
+            this.dao = new FileHighscoreDao("highscore.txt");
+        } catch (Exception e) {
+            System.out.println("Error: " +  e.getMessage());
+        }
     }
     
     @Override
@@ -55,7 +61,7 @@ public class SnakeGameApplication extends Application {
         stage.setScene(scene1);  
         
         btn1.setOnAction((event) -> {
-            this.name = first.getText();
+            this.name = first.getText().trim();
             run++;
             if (run == 1) {
                 stage.setScene(scene2);
@@ -64,12 +70,28 @@ public class SnakeGameApplication extends Application {
                 Scene newScene = second.getScene();
                 stage.setScene(newScene);
             }
+            try {
+                if (dao.containsName(name) == -1 && !this.name.equals("")) {
+                    dao.create(name, 0);
+                } 
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
         });
         
         btn4.setOnAction((event) -> {
             this.score = second.getScore();
             third.setScoreText(score);
             stage.setScene(scene3);
+            
+            try {
+                int oldScore = dao.containsName(name);
+                if(oldScore < score && oldScore != -1) {
+                    dao.update(name, score);
+                }
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
         });
         
         btn2.setOnAction((event) -> {
@@ -79,7 +101,9 @@ public class SnakeGameApplication extends Application {
         });
         
         btn3.setOnAction((event) -> {
-            stage.setScene(scene1);
+            first.clearText();
+            Scene newScene = first.getScene();
+            stage.setScene(newScene);
         });    
         
         stage.show();
