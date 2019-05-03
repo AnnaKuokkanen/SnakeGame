@@ -9,7 +9,7 @@ import javafx.scene.layout.FlowPane;
 public class FirstView {
     
     private Button btn;
-    private String name;
+    //private String name;
     private TextField field;
     
     public FirstView() {
@@ -18,7 +18,7 @@ public class FirstView {
     }
     
     public Scene getScene() {
-        this.name = field.getText();
+        //this.name = field.getText();
         
         FlowPane components = new FlowPane();
         components.getChildren().add(btn);
@@ -33,7 +33,7 @@ public class FirstView {
     }
     
     public String getText() {
-        return this.name;
+        return field.getText();
     }
     public void clearText() {
         this.field.clear();

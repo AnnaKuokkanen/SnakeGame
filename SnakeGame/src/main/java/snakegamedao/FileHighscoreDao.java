@@ -12,29 +12,28 @@ import java.util.Scanner;
 public class FileHighscoreDao implements SnakeGameDao {
     
     private Map<String, Integer> names;
-    private String file;
-    private Scanner reader;
-    private FileWriter writer;
+    private File file;
     
-    public FileHighscoreDao(String file) throws Exception {
+    public FileHighscoreDao(String fileName) throws Exception {
         this.names = new HashMap<>();
-        this.file = file;
-        
-        /*try {
+        this.file = new File(fileName);
+        //get everything from old file and put them on the names-hashmap
+        try {
             Scanner reader = new Scanner(this.file);
             while(reader.hasNextLine()) {
                 String[] parts = reader.nextLine().split(":");
-                String name = parts[0];
-                int score = Integer.parseInt(parts[1]);
+                names.put(parts[0], Integer.parseInt(parts[1]));
             }
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
-        }*/
+        }
+        
     }
     
     @Override
     public void create(String name, int score) throws Exception {
         names.put(name, score);
+        System.out.println(name + ":" + score);
         write(name, score);
     }
     

@@ -47,6 +47,7 @@ public class SnakeGameApplication extends Application {
         this.btn3 = third.getSecondButton(); //from third to first
         
         this.run = 0;
+        
         try {
             this.dao = new FileHighscoreDao("highscore.txt");
         } catch (Exception e) {
@@ -60,6 +61,7 @@ public class SnakeGameApplication extends Application {
         
         stage.setScene(scene1);  
         
+        
         btn1.setOnAction((event) -> {
             this.name = first.getText().trim();
             run++;
@@ -70,28 +72,27 @@ public class SnakeGameApplication extends Application {
                 Scene newScene = second.getScene();
                 stage.setScene(newScene);
             }
-            try {
-                if (dao.containsName(name) == -1 && !this.name.equals("")) {
-                    dao.create(name, 0);
-                } 
-            } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage());
-            }
         });
-        
         btn4.setOnAction((event) -> {
             this.score = second.getScore();
             third.setScoreText(score);
             stage.setScene(scene3);
             
             try {
+                if (dao.containsName(name) == -1 && !this.name.equals("")) {
+                    dao.create(name, score);
+                } 
+            } catch (Exception e) {
+                System.out.println("Error: " + e.getMessage());
+            }
+            /*try {
                 int oldScore = dao.containsName(name);
                 if(oldScore < score && oldScore != -1) {
                     dao.update(name, score);
                 }
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
-            }
+            }*/
         });
         
         btn2.setOnAction((event) -> {
