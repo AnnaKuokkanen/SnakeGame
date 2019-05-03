@@ -71,8 +71,8 @@ public class SnakeGameApplication extends Application {
                 second.setup();
                 Scene newScene = second.getScene();
                 stage.setScene(newScene);
-            }
-        });
+            } 
+       });
         btn4.setOnAction((event) -> {
             this.score = second.getScore();
             third.setScoreText(score);
