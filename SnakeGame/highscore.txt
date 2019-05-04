@@ -1,10 +1,2 @@
-mikko:0
-ville:0
-123:0
-alex:0
-milla:21
-345:2
-johanna:8
-mao:2
-maria:0
-anna:0
+minna:10
+anna:2

@@ -50,9 +50,12 @@ public class FileHighscoreDao implements SnakeGameDao {
     
     @Override 
     public void update(String name, int score) throws Exception {
-        names.remove(name);
-        names.put(name, score);
-        write(name, score);
+        int oldScore = names.get(name);
+        if(oldScore < score) {
+            names.remove(name);
+            names.put(name, score);
+            write(name, score);
+        }
     }
     
     public void write(String name, int score) throws Exception {
