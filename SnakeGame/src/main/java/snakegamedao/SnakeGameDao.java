@@ -8,5 +8,5 @@ public interface SnakeGameDao {
     
     int containsName(String name);
     
-    void update(String name, int score);
+    void update(String name, int score) throws Exception;
 }

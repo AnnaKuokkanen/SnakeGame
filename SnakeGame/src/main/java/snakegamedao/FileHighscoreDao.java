@@ -49,24 +49,13 @@ public class FileHighscoreDao implements SnakeGameDao {
     }
     
     @Override 
-    public void update(String name, int score) {
-        try (Scanner reader = new Scanner(file)) {
-            while (reader.hasNextLine()) {
-                String[] parts = reader.nextLine().split(":");
-                if (parts[0].equals(name)) {
-                    int newScore = Integer.parseInt(parts[1]);
-                    names.put(parts[0], newScore);
-                }
-            }
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
-        }
+    public void update(String name, int score) throws Exception {
+        names.remove(name);
+        names.put(name, score);
+        write(name, score);
     }
     
     public void write(String name, int score) throws Exception {
-        System.out.println("Mennään metodiin write");
-        //FileWriter fw = new FileWriter(this.file);
-        //BufferedWriter buffWriter = new BufferedWriter(fw);
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(this.file))) {
             for (String n : names.keySet()) {
                 bw.write(n + ":" + names.get(n));
