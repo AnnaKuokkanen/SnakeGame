@@ -102,5 +102,10 @@ public class SnakeTest {
         assertEquals(1,coordinates[0][0]);
         assertEquals(1,coordinates[1][0]);
     }
+    
+    @Test
+    public void rigthLength() {
+        assertEquals(1, snake.getLength());
+    }
 
 }

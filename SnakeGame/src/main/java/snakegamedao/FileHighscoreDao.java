@@ -58,6 +58,7 @@ public class FileHighscoreDao implements SnakeGameDao {
         }
     }
     
+    @Override
     public void write(String name, int score) throws Exception {
         try (BufferedWriter bw = new BufferedWriter(new FileWriter(this.file))) {
             for (String n : names.keySet()) {
@@ -68,5 +69,10 @@ public class FileHighscoreDao implements SnakeGameDao {
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }
+    }
+    
+    @Override
+    public Map<String, Integer> getNames() {
+        return this.names;
     }
 }

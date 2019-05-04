@@ -1,6 +1,6 @@
 package snakegamedao;
 
-import java.util.List;
+import java.util.Map;
 
 public interface SnakeGameDao {
     
@@ -9,4 +9,8 @@ public interface SnakeGameDao {
     int containsName(String name);
     
     void update(String name, int score) throws Exception;
+    
+    void write(String name, int score) throws Exception; 
+    
+    Map<String, Integer> getNames();
 }

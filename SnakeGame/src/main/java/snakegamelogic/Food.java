@@ -1,6 +1,9 @@
 
 package snakegamelogic;
 
+/**
+ Class contains methods for logic behind shapes representing food in this game
+ */
 public class Food {
     
     private int x;

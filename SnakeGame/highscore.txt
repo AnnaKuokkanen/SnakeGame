@@ -1,2 +1,2 @@
 minna:10
-anna:2
+anna:20

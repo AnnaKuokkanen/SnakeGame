@@ -6,6 +6,7 @@ import java.util.ArrayList;
 /**
  * Class contains methods that define logic behind character snake in the game
  */
+
 public class Snake {
     private ArrayList<Integer> x;
     private ArrayList<Integer> y;
