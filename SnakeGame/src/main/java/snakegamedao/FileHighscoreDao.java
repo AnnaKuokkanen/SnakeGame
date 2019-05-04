@@ -21,7 +21,7 @@ public class FileHighscoreDao implements SnakeGameDao {
         //get everything from old file and put them on the names-hashmap
         try {
             Scanner reader = new Scanner(this.file);
-            while(reader.hasNextLine()) {
+            while (reader.hasNextLine()) {
                 String[] parts = reader.nextLine().split(":");
                 names.put(parts[0], Integer.parseInt(parts[1]));
             }
@@ -41,7 +41,7 @@ public class FileHighscoreDao implements SnakeGameDao {
     @Override
     public int containsName(String name) {
         for (String n : names.keySet()) {
-            if(n.equals(name)) {
+            if (n.equals(name)) {
                 return names.get(name);
             }
         }
@@ -51,7 +51,7 @@ public class FileHighscoreDao implements SnakeGameDao {
     @Override 
     public void update(String name, int score) throws Exception {
         int oldScore = names.get(name);
-        if(oldScore < score) {
+        if (oldScore < score) {
             names.remove(name);
             names.put(name, score);
             write(name, score);

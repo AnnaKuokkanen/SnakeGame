@@ -1,5 +1,5 @@
 
-package snakegametest;
+package snakegamelogictest;
 
 import snakegamelogic.Snake;
 import java.util.ArrayList;

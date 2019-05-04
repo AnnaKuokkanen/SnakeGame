@@ -82,7 +82,7 @@ public class SnakeGameApplication extends Application {
                 if (dao.containsName(name) == -1 && !this.name.equals("")) {
                     dao.create(name, score);
                 } 
-                if(dao.containsName(name) != -1 && !this.name.equals("")) {
+                if (dao.containsName(name) != -1 && !this.name.equals("")) {
                     dao.update(name, score);
                 }
             } catch (Exception e) {
