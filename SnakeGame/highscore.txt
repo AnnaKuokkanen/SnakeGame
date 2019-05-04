@@ -1,1 +1,4 @@
+alex:0
+mao:2
+maria:0
 anna:2

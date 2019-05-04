@@ -48,7 +48,7 @@
                 <version>0.8.0</version>
                 <configuration>
                     <excludes>
-                        <exclude>SnakeGame/gui/*</exclude>
+                        <exclude>gui/*</exclude>
                     </excludes>
                 </configuration> 
                 <executions>

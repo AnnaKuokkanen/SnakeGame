@@ -3,6 +3,7 @@ package snakegamedao;
 
 import gui.FirstView;
 import gui.ThirdView;
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileWriter;
 import java.util.Map;
@@ -63,8 +64,15 @@ public class FileHighscoreDao implements SnakeGameDao {
     }
     
     public void write(String name, int score) throws Exception {
-        try (FileWriter fw = new FileWriter(this.file)) {
-            fw.write(name + ":" + score + "\n");
+        System.out.println("Mennään metodiin write");
+        //FileWriter fw = new FileWriter(this.file);
+        //BufferedWriter buffWriter = new BufferedWriter(fw);
+        try (BufferedWriter bw = new BufferedWriter(new FileWriter(this.file))) {
+            for (String n : names.keySet()) {
+                bw.write(n + ":" + names.get(n));
+                bw.newLine();
+            }
+            
         } catch (Exception e) {
             System.out.println("Error: " + e.getMessage());
         }

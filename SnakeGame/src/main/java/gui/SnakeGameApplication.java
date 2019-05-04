@@ -85,14 +85,6 @@ public class SnakeGameApplication extends Application {
             } catch (Exception e) {
                 System.out.println("Error: " + e.getMessage());
             }
-            /*try {
-                int oldScore = dao.containsName(name);
-                if(oldScore < score && oldScore != -1) {
-                    dao.update(name, score);
-                }
-            } catch (Exception e) {
-                System.out.println("Error: " + e.getMessage());
-            }*/
         });
         
         btn2.setOnAction((event) -> {
