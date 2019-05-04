@@ -13,7 +13,9 @@ public class Food {
         this.x = x;
         this.y = y;
     }
-    
+    /**
+     Resets food bit's coordinates.
+     */
     public void move(int i, int j) {
         setX(i);
         setY(j);

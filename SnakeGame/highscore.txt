@@ -1,2 +1,6 @@
+mikko:5
 minna:10
+miro:3
+tigerlily:13
+ricu:26
 anna:20

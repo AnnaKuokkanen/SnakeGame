@@ -181,8 +181,6 @@ public class SnakeGraphics {
     
     public void grow() {
         this.snakeLogic.grow();
-        //double x = snakeLogic.getX().get(snakeLogic.getX().size() - 1);
-        //double y = snakeLogic.getY().get(snakeLogic.getY().size() - 1);
         double x = snake.get(snake.size() - 1).getX() + 10;
         double y = snake.get(snake.size() - 1).getY();
         Rectangle newBit = new Rectangle(x, y, 10, 10);
