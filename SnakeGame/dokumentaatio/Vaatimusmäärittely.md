@@ -10,7 +10,7 @@ nimimerkillä aikaisemmin, se on tallentunut tiedostoon ja pelaajan pisteitä ai
 ## Käyttöliittymä
 Sovelluksessa on kolme eri näkymää: alussa on tekstikenttä, johon syötetään nimimerkki ja Start-nappi. Toisessa näkymässä on 
 itse peli. Kolmannessa näkymässä on teksti "Game over", käyttäjän keräämä pistemäärä ja kaksi nappia: Exit ja Play again.
-![Kuva](liittyma.jpg)
+![Kuva](gui.jpg)
 
 ## Perusversion tarjoama toiminnallisuus
 - käyttäjä voi syöttää nimimerkin, kirjautumista ei tarvita. On myös mahdollista pelata nimettömänä, jolloin pisteet eivät tallennu
