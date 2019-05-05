@@ -16,13 +16,6 @@ eri näkymien vaihtamisesta. Sama luokka myös kutsuu metodeja luokasa
 [FileHighscoreDao](https://github.com/AnnaKuokkanen/SnakeGame/blob/master/SnakeGame/src/main/java/snakegamedao/FileHighscoreDao.java), 
 jota käytetään tietojen pysyväistallennukseen. 
 
-## Pelin aloittaminen
-
-![Sekvenssikaavio](ots.jpg)
-
-Sekvenssikaavio esittää pelin alkua ja pisteiden tallennusta. Peli alkaa kun käyttäjä syöttää kenttään nimimerkin ja painaa START-nappia. Tämä vaihtaa näkymän pelinäkymään ja tallentaa käyttäjänimen tietokantaan, jos se ei ole vielä tietokannassa. 
-Kun pelaaja on hävinnyt pelin, tietokantaan tallennetaan hänen pisteensä. 
-
 # Sovelluslogiikka
 
 Sovelluslogiikan muodostavat luokat [Snake](https://github.com/AnnaKuokkanen/SnakeGame/blob/master/SnakeGame/src/main/java/snakegamelogic/Snake.java), 
@@ -41,7 +34,22 @@ sen metodeja pelin lopussa, jolloin se tallentaa nimimerkit ja pisteet highscore
 
 Jos ohjelman suorituksen alussa projektin juuressa ei ole tiedostoa highscore.txt, 
 ohjelma luo sellaisen. Kun käyttäjän peli on päättynyt, tiedostoon tallennetaan 
-käyttäjänimi 
+käyttäjänimi ja käyttäjän kerryttämät pisteet muodossa 
+`käyttäjänimi:pisteet`
+
+Käyttäjänimi toimii id:nä. Jos samalla käyttäjänimellä on jo pelattu, uutta riviä 
+ei luoda, vaan pisteet päivitetään sillä ehdolla, että uudet pisteet ovat paremmat
+kuin vanhat pisteet. 
+
+## Päätoiminnallisuudet
+ 
+### Pelin aloittaminen
+
+![Sekvenssikaavio](ots.jpg)
+
+Sekvenssikaavio esittää pelin alkua ja pisteiden tallennusta. Peli alkaa kun käyttäjä syöttää kenttään nimimerkin ja painaa START-nappia. Tämä vaihtaa näkymän pelinäkymään ja tallentaa käyttäjänimen tietokantaan, jos se ei ole vielä tietokannassa. 
+Kun pelaaja on hävinnyt pelin, tietokantaan tallennetaan hänen pisteensä. 
+
 
 ## Ohjelman rakenteeseen jääneet heikkoudet
 
