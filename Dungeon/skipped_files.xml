@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE suppressions PUBLIC
+    "-//Puppy Crawl//DTD Suppressions 1.1//EN"
+    "http://www.puppycrawl.com/dtds/suppressions_1_1.dtd">
+
+<suppressions>
+    <suppress files="dungeon.ui.DungeonUi.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="dungeon.ui.GameScreen.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="dungeon.ui.HighScoresScreen.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="dungeon.ui.TileMapper.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="dungeon.ui.TitleScreen.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="dungeon.ui.ViewManager.java" checks="[a-zA-Z0-9]*"/>
+    <suppress files="dungeon.ui.SettingsScreen.java" checks="[a-zA-Z0-9]*"/>
+</suppressions>
