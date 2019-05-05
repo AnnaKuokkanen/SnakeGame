@@ -30,5 +30,6 @@ Järjestelmätestaus on tässä ohjelmassa suoritettu manuaalisesti.
 
 ## Sovellukseen jääneet laatuongelmat
 
-
+Jar-tiedoston generoinnissa on ollut ongelmia. Nyt tiedosto on mahdollista generoida, 
+mutta sen suorittaminen aiheuttaa virheen: java.lang.NoClassDefFoundError: javafx/application/Application.
 

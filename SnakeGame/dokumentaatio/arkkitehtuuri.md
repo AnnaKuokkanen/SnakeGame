@@ -50,6 +50,20 @@ kuin vanhat pisteet.
 Sekvenssikaavio esittää pelin alkua ja pisteiden tallennusta. Peli alkaa kun käyttäjä syöttää kenttään nimimerkin ja painaa START-nappia. Tämä vaihtaa näkymän pelinäkymään ja tallentaa käyttäjänimen tietokantaan, jos se ei ole vielä tietokannassa. 
 Kun pelaaja on hävinnyt pelin, tietokantaan tallennetaan hänen pisteensä. 
 
+### Pelin lopettaminen
+
+![Sekvenssikaavio](endgame.jpg)
+
+Sekvenssikaavio esittää sitä, kuinka SnakeGameApplication vaihtaa näkymiä ja 
+hakee käyttäjän nimen ja pisteet.
+
+### Uuden käyttäjän luominen
+
+![Sekvenssikaavio](newuser.jpg)
+
+Tässä esitetään, kuinka ohjelma toimii, jos käyttäjänimi on uusi.
+
+### Käyttäjän pisteiden päivittäminen 
 
 ## Ohjelman rakenteeseen jääneet heikkoudet
 
