@@ -48,7 +48,6 @@ public class FileHighscoreDao implements SnakeGameDao {
     @Override
     public void create(String name, int score) throws Exception {
         names.put(name, score);
-        System.out.println(name + ":" + score);
         write();
     }
     

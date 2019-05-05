@@ -21,3 +21,10 @@ Tämän jälkeen näkymään ilmestyy STOP-nappi, jota painamalla päästään v
 Viimeisessä näkymässä näkee pisteet, joita kerrytti pelikierroksen aikana. Lisäksi 
 voi päättää, haluaako pelata uudestaan samalla nimimerkillä (jolloin valitaan Play again) 
 vai päättää pelin, joilloin peli siirtyy ensimmäiseen näkymään, jossa voi valita uuden nimimerkin.  
+
+## Vaadittava tiedosto
+
+Ohjelma tarvitsee toimiakseen oikein projektin juureen highscore.txt-nimisen tiedoston. 
+Jos tiedostoa ei ohjelmaa käynnistettäessä ole, sellainen luodaan. Jo olemassaolevaa 
+tiedostoa voi muokata käsin (lisätä ja poistaa nimimerkkejä, muuttaa pisteitä jne.) 
+silloin, kun ohjelma ei ole suorituksessa. Kun ohjelma on aloitettu, tiedostolle ei saa tehdä mitään. 
