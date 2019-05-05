@@ -1,4 +1,4 @@
-## Rakenne:
+# Rakenne:
 
 ![Kuva arkkitehtuurista](SnakeGameArchitecture.jpg) 
 
@@ -10,8 +10,11 @@ Käyttöliittymä sisältää kolme erilaista näkymää:
 - loppunäkymä
 
 Jokainen näkymä on oma luokkansa, jossa on metodi, joka palauttaa Scene-olion. 
-Lisäksi ohjelmassa on erillinen luokka (SnakeGameApplication), joka näkee nämä kolme luokkaa ja vastaa 
-eri näkymien vaihtamisesta. 
+Lisäksi ohjelmassa on erillinen luokka [SnakeGameApplication](https://github.com/AnnaKuokkanen/SnakeGame/blob/master/SnakeGame/src/main/java/gui/SnakeGameApplication.java), 
+joka näkee nämä kolme luokkaa ja vastaa 
+eri näkymien vaihtamisesta. Sama luokka myös kutsuu metodeja luokasa 
+[FileHighscoreDao](https://github.com/AnnaKuokkanen/SnakeGame/blob/master/SnakeGame/src/main/java/snakegamedao/FileHighscoreDao.java), 
+jota käytetään tietojen pysyväistallennukseen. 
 
 ## Pelin aloittaminen
 
@@ -19,6 +22,26 @@ eri näkymien vaihtamisesta.
 
 Sekvenssikaavio esittää pelin alkua ja pisteiden tallennusta. Peli alkaa kun käyttäjä syöttää kenttään nimimerkin ja painaa START-nappia. Tämä vaihtaa näkymän pelinäkymään ja tallentaa käyttäjänimen tietokantaan, jos se ei ole vielä tietokannassa. 
 Kun pelaaja on hävinnyt pelin, tietokantaan tallennetaan hänen pisteensä. 
+
+# Sovelluslogiikka
+
+Sovelluslogiikan muodostavat luokat [Snake](https://github.com/AnnaKuokkanen/SnakeGame/blob/master/SnakeGame/src/main/java/snakegamelogic/Snake.java), 
+[Food](https://github.com/AnnaKuokkanen/SnakeGame/blob/master/SnakeGame/src/main/java/snakegamelogic/Food.java) ja 
+[Score](https://github.com/AnnaKuokkanen/SnakeGame/blob/master/SnakeGame/src/main/java/snakegamelogic/Score.java).
+Nämä luokat vastaavat kirjanpidosta ja niitä käytetään käyttöliittymän luokissa 
+olioina. 
+
+# Tietojen pysyväistallennus
+
+Pakkauksen snakegamedao DAO-suunnittelumallia noudattava luokka FileHighscoreDao 
+sisältää metodeja tiedostoon tallentamista varten. SnakeGameApplication kutsuu 
+sen metodeja pelin lopussa, jolloin se tallentaa nimimerkit ja pisteet highscore.txt-nimiseen tiedostoon. 
+
+### Tiedosto
+
+Jos ohjelman suorituksen alussa projektin juuressa ei ole tiedostoa highscore.txt, 
+ohjelma luo sellaisen. Kun käyttäjän peli on päättynyt, tiedostoon tallennetaan 
+käyttäjänimi 
 
 ## Ohjelman rakenteeseen jääneet heikkoudet
 
