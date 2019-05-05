@@ -15,7 +15,7 @@ Sovellus on klassinen matopeli.
 [Työaikakirjanpito](https://github.com/AnnaKuokkanen/ot-harjoitustyo/blob/master/SnakeGame/dokumentaatio/tyotunnit.md)
 
 ## Releaset
-[Viikko 5](https://github.com/AnnaKuokkanen/ot-harjoitustyo/releases/tag/viikko5)
+[Viikko 5](https://github.com/AnnaKuokkanen/ot-harjoitustyo/releases/tag/viikko5) 
 [Loppupalautus](https://github.com/AnnaKuokkanen/SnakeGame/releases/tag/loppupalautus)
 
 ## Komentorivitoiminnot
