@@ -1,6 +1,9 @@
 mikko:5
 minna:10
-miro:3
+miro:11
+mao:11
 tigerlily:13
+markku:3
 ricu:26
 anna:20
+nina:1

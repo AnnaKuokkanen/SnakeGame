@@ -28,14 +28,18 @@ public class SnakeTest {
     @Test
     public void isSnakeGrowing() {
         snake.grow();
-        assertEquals(2,snake.getLength());
+        assertEquals(2, snake.getLength());
+        assertEquals(1, (int) snake.getX().get(0));
+        assertEquals(1, (int) snake.getY().get(0));
+        assertEquals(2, (int) snake.getX().get(snake.getX().size() - 1));
     }
     
     @Test
-    public void isLastremoved() {
-        snake.grow();
+    public void isLastRemoved() {
         snake.removeLast();
-        assertEquals(1,snake.getLength());
+        assertEquals(0,snake.getLength());
+        assertEquals(true, snake.getX().isEmpty());
+        assertEquals(true, snake.getY().isEmpty());
     }
     
     @Test
@@ -47,6 +51,7 @@ public class SnakeTest {
         snake.moveUp();
         assertEquals(x,snake.getX());
         assertEquals(y,snake.getY());
+        assertEquals(1, snake.getLength());
     }
     
     @Test
@@ -58,6 +63,7 @@ public class SnakeTest {
         snake.moveDown();
         assertEquals(x,snake.getX());
         assertEquals(y,snake.getY());
+        assertEquals(1, snake.getLength());
     }
     
     @Test 
@@ -69,6 +75,7 @@ public class SnakeTest {
         snake.moveLeft();
         assertEquals(x,snake.getX());
         assertEquals(y,snake.getY());
+        assertEquals(1, snake.getLength());
     }
     
     @Test
@@ -80,27 +87,7 @@ public class SnakeTest {
         snake.moveRight();
         assertEquals(x,snake.getX());
         assertEquals(y,snake.getY());
-    }
-    
-    @Test
-    public void isCollisionWorking() {
-        assertEquals(false, snake.collision());
-        snake.grow();
-        snake.grow();
-        snake.grow();
-        snake.grow();
-        snake.moveDown();
-        snake.moveRight();
-        snake.moveUp();
-        
-        assertEquals(true, snake.collision());
-    }
-    
-    @Test
-    public void areHeadCoordinatesRight() {
-        int[][] coordinates = snake.getHeadCoordinates();
-        assertEquals(1,coordinates[0][0]);
-        assertEquals(1,coordinates[1][0]);
+        assertEquals(1, snake.getLength());
     }
     
     @Test

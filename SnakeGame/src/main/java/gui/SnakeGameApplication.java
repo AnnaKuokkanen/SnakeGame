@@ -3,13 +3,13 @@ package gui;
 
 import javafx.stage.Stage;
 import javafx.application.Application;
-import gui.FirstView;
-import gui.SecondView;
-import gui.ThirdView;
 import snakegamedao.FileHighscoreDao;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 
+/**
+ This class has access to all three views: FirstView, SecondView, ThirdView and its purpose is to change views as game progresses.
+ */
 public class SnakeGameApplication extends Application {
     
     private FirstView first;
@@ -31,6 +31,11 @@ public class SnakeGameApplication extends Application {
     
     private FileHighscoreDao dao;
     
+    /**
+     * This is a basic constructor that gets all scenes and buttons.
+     * Buttons: btn1 from first to second view; btn4 from second to third view
+     * btn2 from third to second view; btn3 from third to first view
+     */
     public SnakeGameApplication() {
         
         this.first = new FirstView();
@@ -41,10 +46,10 @@ public class SnakeGameApplication extends Application {
         this.scene2 = second.getScene();
         this.scene3 = third.getScene();
         
-        this.btn1 = first.getButton(); //from first to second
-        this.btn4 = second.getButton(); //from second to third
-        this.btn2 = third.getFirstButton(); //from third to second
-        this.btn3 = third.getSecondButton(); //from third to first
+        this.btn1 = first.getButton(); 
+        this.btn4 = second.getButton(); 
+        this.btn2 = third.getFirstButton(); 
+        this.btn3 = third.getSecondButton(); 
         
         this.run = 0;
         
@@ -55,6 +60,11 @@ public class SnakeGameApplication extends Application {
         }
     }
     
+    /**
+     This method is responsible for handling the views during the game and also for saving the results.
+     * 
+     * @param stage is a parameter assigned by class Application. 
+     */
     @Override
     public void start(Stage stage) {
         stage.setTitle("Snake Game");

@@ -10,7 +10,7 @@ public interface SnakeGameDao {
     
     void update(String name, int score) throws Exception;
     
-    void write(String name, int score) throws Exception; 
+    void write() throws Exception; 
     
     Map<String, Integer> getNames();
 }

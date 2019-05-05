@@ -2,7 +2,7 @@
 package snakegamelogic;
 
 /**
- Class contains methods for logic behind shapes representing food in this game
+ * Class contains methods for logic behind shapes representing food in this game.
  */
 public class Food {
     
@@ -13,8 +13,12 @@ public class Food {
         this.x = x;
         this.y = y;
     }
+    
     /**
-     Resets food bit's coordinates.
+     * Resets food bit's coordinates.
+     * 
+     * @param i is x-coordinate.
+     * @param j is y-coordinate.
      */
     public void move(int i, int j) {
         setX(i);

@@ -5,7 +5,11 @@ import javafx.scene.Scene;
 import snakegamelogic.Snake;
 import snakegamelogic.Score;
 import snakegamelogic.Food;
-import java.util.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Random;
 import javafx.animation.AnimationTimer;
 import javafx.scene.control.Button;
 import javafx.scene.input.KeyCode;
@@ -14,6 +18,9 @@ import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.shape.Shape;
 
+/**
+ * This class contains animation and graphics of the game itself.
+ */
 public class SnakeGraphics {
    
     private Circle food;
@@ -41,6 +48,12 @@ public class SnakeGraphics {
         setWall(board);
     }
     
+    /**
+     * This method returns second scene in the game which contains animation. 
+     * Inside it is class Animation Timer and its method handle. 
+     * 
+     * @return scene. 
+     */
     public Scene getScene() {
         board.getChildren().add(this.food);
         for (int i = 0; i < snake.size(); i++) {
@@ -56,11 +69,20 @@ public class SnakeGraphics {
             pressedButtons.put(event.getCode(), Boolean.FALSE);
         });
         
+        /**
+         * Is responsible for animation. 
+         */
         new AnimationTimer() {
             int direction = 0;
+            
+            /**
+             * This method defines the movement of snake in the game. 
+             * Direction is a variable which is used to represent different directions. 
+             * 0 = down; 1 = left; 2 = up; 3 = right.
+             * 
+             * @param i is the integer representing direction.
+             */
             public void move(int i) {
-                //0 = down; 1 = left; 2 = up; 3 = right
-                
                 if (i == 0) {
                     board.getChildren().remove(snake.get(snake.size() - 1));
                     snake.remove(snake.size() - 1);
@@ -90,6 +112,13 @@ public class SnakeGraphics {
                     board.getChildren().add(snake.get(0));
                 }
             }
+            
+            /**
+             * This method handles animation using the method move() according to input from user.
+             * It also keeps track of scores, food and collisions. 
+             * 
+             * @param now is a parameter assigned by AnimatonTimer. 
+             */
             @Override 
             public void handle(long now) {
                 if (pressedButtons.getOrDefault(KeyCode.LEFT, false)) {
@@ -119,10 +148,6 @@ public class SnakeGraphics {
         return scene; 
     }
     
-    public Button getButton() {
-        return this.btn;
-    }
-    
     public void setWall(Pane pane) {
         this.wall1 = new Rectangle(0, 0, 900, 10);
         this.wall2 = new Rectangle(0, 0, 10, 600);
@@ -139,15 +164,19 @@ public class SnakeGraphics {
         this.snakeLogic = new Snake(i, j);
     }
     
-    public List<Rectangle> getSnake() {
-        return this.snake;
-    }
     
     public void setFood(int i, int j) {
         this.food = new Circle(i, j, 5);
         this.foodLogic = new Food(i, j);
     }
     
+    public Button getButton() {
+        return this.btn;
+    }
+    
+    public List<Rectangle> getSnake() {
+        return this.snake;
+    }
     public Circle getFood() {
         return this.food;
     }
@@ -156,6 +185,12 @@ public class SnakeGraphics {
         return this.score.getScore();
     }
     
+    /**
+     * This method is used to move food on board.
+     * It removes old bit of food and sets a new one to a random location.  
+     * 
+     * @param pane is the board in use. 
+     */
     public void moveFood(Pane pane) {
         Random rand = new Random();
         int x = rand.nextInt(865) + 10;
@@ -167,11 +202,21 @@ public class SnakeGraphics {
         foodLogic.setY(y);
     }
     
+    /**
+     * This method checks if the snake has collided with food. 
+     * 
+     * @return boolean value depending on circumstances. 
+     */
     public boolean collisionFood() {
         Shape intersection = Shape.intersect(this.snake.get(0), this.food);
         return intersection.getBoundsInLocal().getWidth() != -1;
     }
     
+    /**
+     * Checks if snake has collided with any of the four walls.
+     * 
+     * @return true if snake has collided with wall, otherwise false. 
+     */
     public boolean collisionWall() {
         if (snakeLogic.getX().get(0) < 10 || snakeLogic.getY().get(0) < 10 || snakeLogic.getX().get(0) > 880 || snakeLogic.getY().get(0) > 580) {
             return true;
@@ -179,6 +224,9 @@ public class SnakeGraphics {
         return false;
     }
     
+    /**
+     * This method is responsible for adding new rectangles to graphic representation of snake and keeping snakelogic up-to-date. 
+     */
     public void grow() {
         this.snakeLogic.grow();
         double x = snake.get(snake.size() - 1).getX() + 10;
@@ -188,6 +236,9 @@ public class SnakeGraphics {
         board.getChildren().add(newBit);
     }
     
+    /**
+     * This method does the necessary things for resetting game so that it can be played again. 
+     */
     public void setup() {
         board.getChildren().remove(btn);
         this.pressedButtons = new HashMap<>();

@@ -6,10 +6,12 @@ import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.FlowPane;
 
+/**
+ This is the first view in the game. It has a text field and a button to start the game.
+ */
 public class FirstView {
     
     private Button btn;
-    //private String name;
     private TextField field;
     
     public FirstView() {
@@ -18,8 +20,6 @@ public class FirstView {
     }
     
     public Scene getScene() {
-        //this.name = field.getText();
-        
         FlowPane components = new FlowPane();
         components.getChildren().add(btn);
         components.getChildren().add(field);
@@ -35,6 +35,10 @@ public class FirstView {
     public String getText() {
         return field.getText();
     }
+    
+    /**
+     Empties old name from text field.
+     */
     public void clearText() {
         this.field.clear();
     }

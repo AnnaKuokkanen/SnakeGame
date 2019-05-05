@@ -1,7 +1,8 @@
 
 package snakegamelogic;
+
 /**
- * Class keeps track of scores during game
+ * Class keeps track of scores during game.
  */
 public class Score {
     
@@ -14,8 +15,9 @@ public class Score {
     public int getScore() {
         return this.score;
     }
+    
     /**
-     * Grows score
+     * Grows score.
      */
     public void addScore() {
         this.score++;
