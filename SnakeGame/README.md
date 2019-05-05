@@ -23,18 +23,18 @@ Tässä esitellään komentorivin komennot, joilla seuraavat toimenpiteet suorit
 
 ### Testaus
 
->mvn test (suorittaa testit)
+`mvn test (suorittaa testit)`
 
->mvn jacoco:report (luo testikattavuusraportin)
+`mvn jacoco:report (luo testikattavuusraportin)`
 
 ### Ohjelman suorittavan jarin generointi
 
->mvn package (luo jar-tiedoston hakemistoon target)
+`mvn package (luo jar-tiedoston hakemistoon target)`
 
 ### JavaDoc
 
->mvn javadoc:javadoc (generoi javaDocin)
+`mvn javadoc:javadoc (generoi javaDocin)`
 
 ### Checkstyle
 
->mvn jxr:jxr checkstyle:checkstyle (suorittaa tiedostoon checkstyle.xml määrittelemät tarkistukset)
+`mvn jxr:jxr checkstyle:checkstyle (suorittaa tiedostoon checkstyle.xml määrittelemät tarkistukset)`
