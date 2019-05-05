@@ -1,9 +1,11 @@
 # Käyttöohje
 
+Lataa tiedosto [SnakeGameJar.jar](https://github.com/AnnaKuokkanen/SnakeGame/releases/tag/loppupalautus)
+
 ## Ohjelman käynnistäminen 
 
 Ohjelma käynnistetään komennolla 
-java -jar SnakeGame.jar
+java -jar SnakeGameJar.jar
 
 ## Nimimerkin määrittäminen
 
