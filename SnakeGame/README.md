@@ -1,6 +1,6 @@
 # Matopeli
 
-Sovellus on klassinen matopeli.
+Sovellus on klassinen matopeli, jossa käyttäjä pyrkii ohjaamaan matoa niin, ettei se kuole.
 
 ## Dokumentaatio
 
