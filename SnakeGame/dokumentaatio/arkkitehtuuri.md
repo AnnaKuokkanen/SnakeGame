@@ -65,6 +65,10 @@ Tässä esitetään, kuinka ohjelma toimii, jos käyttäjänimi on uusi.
 
 ### Käyttäjän pisteiden päivittäminen 
 
+![Sekvenssikaavio](update.jpg)
+
+Tässä kuvassa esitetään käyttäjän pisteiden päivittämistä sovelluksessa.
+
 ## Ohjelman rakenteeseen jääneet heikkoudet
 
 ### Käyttöliittymä 
