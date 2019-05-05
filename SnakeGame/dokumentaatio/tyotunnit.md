@@ -16,5 +16,6 @@ Päivämäärä | Tunnit | Kuvaus
 29.4 | 4 | Edistetty koodia
 2.5 | 4 | Kehitetty tallennusta
 3.5 | 3 | Kehitetty tallennusta
-4.5 | | Parannettu talletusta, laajennettu testejä
-yht | 63 | 
+4.5 | 8 | Parannettu talletusta, laajennettu testejä
+5.5 |  | Parannettu dokumentaatiota ja siistitty koodia
+yht | 71 | 
